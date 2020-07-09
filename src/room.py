@@ -2,12 +2,13 @@ from typing import List
 from item import Item 
 
 class Room:
-    def __init__(self, name: str, description: str, inventory: List[Item] = []):
+    def __init__(self, name, description, items=[], **kwargs):
         self.name = name
         self.description = description
-        self.inventory = inventory
-    def __str__(self):
-        return f"{self.name}"
+        self.items = items
 
-    def print_description(self):
-        return f"{self.description}"
+    def remove_item(self, item):
+        self.items.remove(item)
+
+    def add_item(self, item):
+        self.items.append(item) 
