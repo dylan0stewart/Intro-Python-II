@@ -60,10 +60,10 @@ if __name__ == '__main__':
 
     while True:
         print("--" * 20)
-        print("Current room:", player.current_room.name)
+        print("Location", player.current_room.name)
         print( player.current_room.description)
         
-        player_input = input("Please enter a command:")
+        player_input = input("What would you like to do?")
         player_input_first = player_input.split()[0]
         if player_input == "q":
             print("Exiting Game")
